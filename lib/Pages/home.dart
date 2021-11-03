@@ -1,53 +1,166 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'Login.dart';
-
-void main() {
-  runApp(const Home());
-}
 
 class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: const Text('Home Route'),
-        ),
-        body: Padding(
-          padding: const EdgeInsets.all(20),
-          child: Container(
-            child: Column(
-              children: [
-                Center(
-                  child: Text(
-                    'Home',
-                    style: TextStyle(
-                        fontWeight: FontWeight.w900,
-                        fontSize: 30.0,
-                        color: Colors.blue),
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          child: new Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              new Padding(padding: EdgeInsets.only(top: 10.0)),
+              Image.asset(
+                'Image/logo.png',
+                height: 200,
+                width: 450,
+              ),
+              new Padding(padding: EdgeInsets.only(top: 10.0)),
+              Text("T MUHAMMAD RAIS HABSYAH"),
+              Text("IT SUPPORT"),
+              Text("RS FIRDAUS"),
+              new Padding(padding: EdgeInsets.only(bottom: 20.0, top: 10.0)),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  // new Padding(padding: EdgeInsets.all(20.0)),
+                  Column(
+                    children: <Widget>[
+                      Card(
+                        child: InkWell(
+                          splashColor: Colors.blue.withAlpha(10),
+                          onTap: () {
+                            Navigator.pushNamed(context, '/register');
+                          },
+                          child: Container(
+                            child: new Card(
+                              child: Image.asset('Image/avatar.png',
+                                  height: 80, width: 80, fit: BoxFit.cover),
+                              margin: EdgeInsets.all(2),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Text("Profil"),
+                    ],
                   ),
-                ),
-                TextFormField(
-                  keyboardType: TextInputType.emailAddress,
-                  decoration: InputDecoration(
-                    labelText: 'Nama Lengkap',
-                    border: OutlineInputBorder(),
-                    prefixIcon: Icon(Icons.email),
+                  Column(
+                    children: <Widget>[
+                      Card(
+                        child: InkWell(
+                          splashColor: Colors.blue.withAlpha(10),
+                          onTap: () {
+                            Navigator.pushNamed(context, '/register');
+                          },
+                          child: Container(
+                            child: new Card(
+                              child: Image.asset('Image/barcode.png',
+                                  height: 80, width: 80, fit: BoxFit.cover),
+                              margin: EdgeInsets.all(2),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Text("Absensi"),
+                    ],
                   ),
-                ),
-                TextButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const LoginScreen()));
-                  },
-                  child: Text("Home"),
-                )
-              ],
-            ),
+                  Column(
+                    children: <Widget>[
+                      Card(
+                        child: InkWell(
+                          splashColor: Colors.blue.withAlpha(10),
+                          onTap: () {
+                            Navigator.pushNamed(context, '/register');
+                          },
+                          child: Container(
+                            child: new Card(
+                              child: Image.asset('Image/dokumen.png',
+                                  height: 80, width: 80, fit: BoxFit.cover),
+                              margin: EdgeInsets.all(2),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Text("Pelni Doc"),
+                    ],
+                  ),
+                ],
+              ),
+              new Padding(padding: EdgeInsets.only(bottom: 20.0, top: 10.0)),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  // new Padding(padding: EdgeInsets.all(20.0)),
+                  Column(
+                    children: <Widget>[
+                      Card(
+                        child: InkWell(
+                          splashColor: Colors.blue.withAlpha(10),
+                          onTap: () {
+                            Navigator.pushNamed(context, '/register');
+                          },
+                          child: Container(
+                            child: new Card(
+                              child: Image.asset('Image/keuangan.png',
+                                  height: 80, width: 80, fit: BoxFit.cover),
+                              margin: EdgeInsets.all(2),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Text("Slip Gaji"),
+                    ],
+                  ),
+                  Column(
+                    children: <Widget>[
+                      Card(
+                        child: InkWell(
+                          splashColor: Colors.blue.withAlpha(10),
+                          onTap: () {
+                            Navigator.pushNamed(context, '/register');
+                          },
+                          child: Container(
+                            child: new Card(
+                              child: Image.asset('Image/lembur.png',
+                                  height: 80, width: 80, fit: BoxFit.cover),
+                              margin: EdgeInsets.all(2),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Text("Lemburan"),
+                    ],
+                  ),
+                  Column(
+                    children: <Widget>[
+                      Card(
+                        child: InkWell(
+                          splashColor: Colors.blue.withAlpha(10),
+                          onTap: () {
+                            Navigator.pushNamed(context, '/register');
+                          },
+                          child: Container(
+                            child: new Card(
+                              child: Image.asset('Image/cuti.png',
+                                  height: 80, width: 80, fit: BoxFit.cover),
+                              margin: EdgeInsets.all(2),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Text("Cuti"),
+                    ],
+                  ),
+                ],
+              ),
+            ],
           ),
-        ));
+        ),
+      ),
+    );
   }
 }

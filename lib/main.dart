@@ -1,40 +1,6 @@
-// import 'package:flutter/material.dart';
-// import 'package:sirs/Pages/home.dart';
-
-// void main() {
-//   runApp(const MaterialApp(
-//     title: 'Navigation Basics',
-//     home: FirstRoute(),
-//   ));
-// }
-
-// class FirstRoute extends StatelessWidget {
-//   const FirstRoute({Key? key}) : super(key: key);
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: const Text('First Route'),
-//       ),
-//       body: Center(
-//         child: ElevatedButton(
-//           child: const Text('Home route'),
-//           onPressed: () {
-//             Navigator.push(
-//               context,
-//               MaterialPageRoute(builder: (context) => const Home()),
-//             );
-//           },
-//         ),
-//       ),
-//     );
-//   }
-// }
-
 import 'package:flutter/material.dart';
 import 'package:sirs/Pages/Register.dart';
-import './Pages//home.dart';
+import 'package:sirs/Pages/home.dart';
 
 // import 'dart:io';
 
@@ -42,17 +8,18 @@ import './Pages//home.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: new LoginScreen(),
+    home: new MyApp(),
     title: "Pelni One", // becomes the route named '/'
     routes: {
-      '/welcome': (BuildContext context) => Home(),
+      '/welcome': (BuildContext context) => MyApp(),
       '/register': (BuildContext context) => RegisterScreen(),
+      '/home': (BuildContext context) => Home(),
     },
   ));
 }
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -123,7 +90,10 @@ class LoginScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(100),
                   ),
                   child: MaterialButton(
-                    onPressed: () => print("Successul Login."),
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Home()));
+                    },
                     color: Colors.blue,
                     child: Text(
                       'LOGIN',
