@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "898734201231",
+    "project_id": "sirs-a7520",
+    "storage_bucket": "sirs-a7520.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:898734201231:android:edcf3c86106f88087cd3fa",
+        "android_client_info": {
+          "package_name": "com.example.sirs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "898734201231-9960bbi23dc6m8pd1ps5p99083bi7kfn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtXAuwwPuSwrvrLlU-xyZAm7fWtZStk0c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "898734201231-9960bbi23dc6m8pd1ps5p99083bi7kfn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
